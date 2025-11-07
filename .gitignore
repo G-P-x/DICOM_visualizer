@@ -12,3 +12,22 @@ UserSettings/
 .vscode/
 # Unity editor and player logs.
 Logs/
+
+
+# Volume Rendering Package specific ignores (remove if something breaks)
+Assets/UnityVolumeRendering-master/UnityVolumeRendering-master/Assets/3rdParty
+Assets/UnityVolumeRendering-master/UnityVolumeRendering-master/Documentation
+Assets/UnityVolumeRendering-master/UnityVolumeRendering-master/Packages
+Assets/UnityVolumeRendering-master/UnityVolumeRendering-master/ProjectSettings
+Assets/UnityVolumeRendering-master/UnityVolumeRendering-master/Screenshots
+Assets/UnityVolumeRendering-master/UnityVolumeRendering-master/.github
+Assets/UnityVolumeRendering-master/UnityVolumeRendering-master/scripts
+Assets/UnityVolumeRendering-master/UnityVolumeRendering-master/.gitignore
+Assets/UnityVolumeRendering-master/UnityVolumeRendering-master/CONTRIBUTING.md
+Assets/UnityVolumeRendering-master/UnityVolumeRendering-master/CREDITS.md
+Assets/UnityVolumeRendering-master/UnityVolumeRendering-master/FUNDING.yml
+Assets/UnityVolumeRendering-master/UnityVolumeRendering-master/gitattributes
+Assets/UnityVolumeRendering-master/UnityVolumeRendering-master/LICENSE
+Assets/UnityVolumeRendering-master/UnityVolumeRendering-master/README.md
+Assets/UnityVolumeRendering-master/UnityVolumeRendering-master/TestChecklist.md
+Assets/UnityVolumeRendering-master/UnityVolumeRendering-master/Third-Party Notices.txt
