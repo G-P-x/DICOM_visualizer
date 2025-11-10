@@ -3170,6 +3170,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 415484507}
+  - component: {fileID: 415484508}
   m_Layer: 0
   m_Name: TrackingSpace
   m_TagString: Untagged
@@ -3200,6 +3201,30 @@ Transform:
   - {fileID: 374936311}
   m_Father: {fileID: 1935414097}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &415484508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415484506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4465b07dd84d11d4388481aa65dfcf57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ControllerScript
+  speed: 2
+  inputActions: {fileID: -944628639613478452, guid: 0d04a98b57262b24bb6ce9edd0a56699, type: 3}
+  moveAction:
+    m_Name: Move
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: e44511a0-1815-4be9-a074-4dc45d7e9e30
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  centralCam: {fileID: 1845810030}
 --- !u!1 &417825210
 GameObject:
   m_ObjectHideFlags: 0
