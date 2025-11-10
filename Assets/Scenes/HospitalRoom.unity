@@ -3214,16 +3214,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ControllerScript
   speed: 2
-  inputActions: {fileID: -944628639613478452, guid: 0d04a98b57262b24bb6ce9edd0a56699, type: 3}
-  moveAction:
-    m_Name: Move
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: e44511a0-1815-4be9-a074-4dc45d7e9e30
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
   centralCam: {fileID: 1845810030}
 --- !u!1 &417825210
 GameObject:
