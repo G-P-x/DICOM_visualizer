@@ -11,10 +11,17 @@ public class LoadPresetDataset : MonoBehaviour
 {
     [SerializeField] DatasetPaths datasetPaths;
     private string rowDatasetPath;
+    private VolumeObjControlPanelLinker linker;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rowDatasetPath = datasetPaths.RawDatasetPath;
+        linker = GetComponent<VolumeObjControlPanelLinker>();
+        if (linker == null)
+        {
+            Debug.LogError("LoadPresetDataset: VolumeObjControlPanelLinker component is missing.");
+            return;
+        }
         StartCoroutine(LoadDatasetCoroutine());
     }
 
@@ -28,6 +35,12 @@ public class LoadPresetDataset : MonoBehaviour
         // observe exceptions if any
         if (loadTask.IsFaulted)
             Debug.LogException(loadTask.Exception);
+        else
+        {
+            yield return null; // wait a frame to ensure dataset is fully initialized
+            Debug.Log("Proceding setting up Control Panel after dataset load.");
+            linker.Link();
+        }
 
     }
     // of this is available also a synchronous version, look at the documentation eventually

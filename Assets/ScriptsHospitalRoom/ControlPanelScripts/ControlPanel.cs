@@ -4,31 +4,27 @@ using UnityVolumeRendering;
 
 public class ControlPanel : MonoBehaviour
 {
-    Slider minThresholdSlider;
-    Slider maxThresholdSlider;
-    Button DynamicVolumeRenderingButton;
-    Button IsosurfaceRenderingButton;
-    Button MaximumIntensityProjectionButton;
+    [Tooltip("Linker is VolumeObjControlPanelLinker that connects ControlPanel with VolumeRenderedObject")]
+    public VolumeObjControlPanelLinker linker;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    /// <summary>
+    /// Notify render mode change to the linked VolumeRenderedObject
+    /// </summary>
+    /// <param name="mode"></param>
+    public void NotifyRenderModeChange(UnityVolumeRendering.RenderMode mode)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        Debug.Log($"ControlPanel: Render mode changed to {mode}");
+        linker.NotifyRenderModeChange(mode);
     }
     
-    // Called when the volume is loaded and VolumeRendering is active in the scene
     /// <summary>
-    /// Sets up the ControlPanel allowing to change the VolumeRenderedObject attributes from the ControlPanel.
+    /// Notify threshold changes to the linked VolumeRenderedObject
     /// </summary>
-    /// <param name="volumeObject">the loaded VolumeRenderedObject</param>
-    public void SetControlPanelControls(VolumeRenderedObject volumeObject)
+    /// <param name="minThreshold">Threshold from minimum slider</param>
+    /// <param name="maxThreshold">Threshold from maximum slider</param>
+    public void NotifyThresholdChange(float minThreshold, float maxThreshold)
     {
-        
+        Debug.Log($"ControlPanel: Thresholds changed to Min: {minThreshold}, Max: {maxThreshold}");
+        linker.NotifyThresholdChange(minThreshold, maxThreshold);
     }
 }

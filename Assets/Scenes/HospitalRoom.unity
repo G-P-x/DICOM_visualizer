@@ -2465,8 +2465,9 @@ GameObject:
   - component: {fileID: 326822170}
   - component: {fileID: 326822167}
   - component: {fileID: 326822172}
+  - component: {fileID: 326822173}
   m_Layer: 0
-  m_Name: LoadRawDataset
+  m_Name: RawDataset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2530,6 +2531,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &326822173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326822166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a1b2c53ef4568943b11f595b5479a6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VolumeObjControlPanelLinker
+  controlPanel: {fileID: 1053325144}
 --- !u!1 &329055193
 GameObject:
   m_ObjectHideFlags: 0
@@ -7227,7 +7241,7 @@ GameObject:
   - component: {fileID: 1053325141}
   - component: {fileID: 1053325140}
   - component: {fileID: 1053325139}
-  - component: {fileID: 1053325143}
+  - component: {fileID: 1053325144}
   m_Layer: 0
   m_Name: CotrolPanel
   m_TagString: Untagged
@@ -7458,7 +7472,7 @@ Transform:
   - {fileID: 210855639}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1053325143
+--- !u!114 &1053325144
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7470,6 +7484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 622b6e9147fab6848ba3fde3628698c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ControlPanel
+  linker: {fileID: 326822173}
 --- !u!1 &1053601825
 GameObject:
   m_ObjectHideFlags: 0
@@ -8758,6 +8773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e95178592d7e8f24bb454abf73bdc328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SlidersManager
+  controlPanel: {fileID: 1053325144}
   minThresholdSlider: {fileID: 862458027}
   maxThresholdSlider: {fileID: 1622948033}
 --- !u!1 &1328072088

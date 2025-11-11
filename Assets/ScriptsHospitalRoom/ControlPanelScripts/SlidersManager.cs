@@ -34,21 +34,25 @@ public class SlidersManager : MonoBehaviour
         }
         if (sender == minThresholdSlider)
         {
-            if (value > maxThresholdSlider.GetValue())
+            float max = maxThresholdSlider.GetValue();
+            if (value > max)
             {
                 maxThresholdSlider.SetValue(value);
             }
             // Notify to the ControlPanel about the change
             Debug.Log($"Min Threshold Slider changed to {value}");
+            controlPanel.NotifyThresholdChange(value, max);
         }
         else if (sender == maxThresholdSlider)
         {
-            if (value < minThresholdSlider.GetValue())
+            float min = minThresholdSlider.GetValue();
+            if (value < min)
             {
                 minThresholdSlider.SetValue(value);
             }
             // Notify to the ControlPanel about the change
             Debug.Log($"Max Threshold Slider changed to {value}");
+            controlPanel.NotifyThresholdChange(min, value);
         }
         else
         {
