@@ -26,6 +26,12 @@ public class VolumeObjControlPanelLinker : MonoBehaviour
         // Here you would set up the ControlPanel to interact with the volumeObject
         Debug.Log("VolumeObjControlPanelLinker: Successfully linked ControlPanel with VolumeRenderedObject.");
     }
+
+    /// <summary>
+    /// Notify the VolumeRenderedObject of threshold changes from the ControlPanel
+    /// </summary>
+    /// <param name="minThreshold"></param>
+    /// <param name="maxThreshold"></param>
     public void NotifyThresholdChange(float minThreshold, float maxThreshold)
     {
         if (volumeObject == null)
@@ -38,6 +44,11 @@ public class VolumeObjControlPanelLinker : MonoBehaviour
         // Here you would implement the logic to update the volumeObject's thresholds
         ChangeVisibleValueRange(minThreshold, maxThreshold);
     }
+
+    /// <summary>
+    /// Notify the VolumeRenderedObject of render mode changes from the ControlPanel
+    /// </summary>
+    /// <param name="mode"></param>
     public void NotifyRenderModeChange(UnityVolumeRendering.RenderMode mode)
     {
         if (volumeObject == null)
@@ -53,6 +64,12 @@ public class VolumeObjControlPanelLinker : MonoBehaviour
 
 
     // Logic to interact with the VolumeRenderedObject would go here
+
+    /// <summary>
+    /// Change the visible value range of the VolumeRenderedObject
+    /// </summary>
+    /// <param name="minValue"></param>
+    /// <param name="maxValue"></param>
     private void ChangeVisibleValueRange(float minValue, float maxValue)
     {
         if (volumeObject == null)
@@ -61,9 +78,15 @@ public class VolumeObjControlPanelLinker : MonoBehaviour
             return;
         }
 
-        Debug.Log($"VolumeObjControlPanelLinker: Changing visible value range to Min: {minValue}, Max: {maxValue}");
+        // Debug.Log($"VolumeObjControlPanelLinker: Changing visible value range to Min: {minValue}, Max: {maxValue}");
         // Here you would implement the logic to change the visible value range of the volumeObject
+        volumeObject.SetVisibilityWindow(new Vector2(minValue, maxValue));
     }
+
+    /// <summary>
+    /// Change the render mode of the VolumeRenderedObject
+    /// </summary>
+    /// <param name="mode"></param>
     private void ChangeRenderMode(UnityVolumeRendering.RenderMode mode)
     {
         if (volumeObject == null)
@@ -74,5 +97,7 @@ public class VolumeObjControlPanelLinker : MonoBehaviour
 
         Debug.Log($"VolumeObjControlPanelLinker: Changing render mode to {mode}");
         // Here you would implement the logic to change the render mode of the volumeObject
+        volumeObject.SetRenderMode(mode);
     }
+
 }
