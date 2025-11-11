@@ -641,6 +641,7 @@ GameObject:
   - component: {fileID: 73319372}
   - component: {fileID: 73319371}
   - component: {fileID: 73319370}
+  - component: {fileID: 73319373}
   m_Layer: 5
   m_Name: Isosurface
   m_TagString: Untagged
@@ -655,13 +656,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 73319368}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 325009634}
-  m_Father: {fileID: 210855639}
+  m_Father: {fileID: 1842527260}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -750,6 +751,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 73319368}
   m_CullTransparentMesh: 1
+--- !u!114 &73319373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73319368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3adcf4700c8193459be264567f0c434, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonBehavior
+  buttonsManager: {fileID: 1842527261}
+  renderMode: 2
 --- !u!1 &82636008
 GameObject:
   m_ObjectHideFlags: 0
@@ -1786,11 +1801,8 @@ RectTransform:
   m_Children:
   - {fileID: 55454109}
   - {fileID: 1818956508}
-  - {fileID: 1984180979}
-  - {fileID: 1841818679}
-  - {fileID: 73319369}
-  - {fileID: 1316062664}
   - {fileID: 1842527260}
+  - {fileID: 1316062664}
   m_Father: {fileID: 1053325142}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -12051,6 +12063,7 @@ GameObject:
   - component: {fileID: 1841818682}
   - component: {fileID: 1841818681}
   - component: {fileID: 1841818680}
+  - component: {fileID: 1841818683}
   m_Layer: 5
   m_Name: MaximumIntensityPorjection
   m_TagString: Untagged
@@ -12065,13 +12078,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841818678}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1598112827}
-  m_Father: {fileID: 210855639}
+  m_Father: {fileID: 1842527260}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -12160,6 +12173,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841818678}
   m_CullTransparentMesh: 1
+--- !u!114 &1841818683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841818678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3adcf4700c8193459be264567f0c434, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonBehavior
+  buttonsManager: {fileID: 1842527261}
+  renderMode: 1
 --- !u!1 &1842527259
 GameObject:
   m_ObjectHideFlags: 0
@@ -12169,6 +12196,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1842527260}
+  - component: {fileID: 1842527261}
   m_Layer: 5
   m_Name: Buttons
   m_TagString: Untagged
@@ -12187,7 +12215,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1984180979}
+  - {fileID: 1841818679}
+  - {fileID: 73319369}
   m_Father: {fileID: 210855639}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -12195,6 +12226,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1842527261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842527259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 289b5ed7f24e9604b92621fd54ee1127, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonsManager
+  dynamicVolumeRenderingButton: {fileID: 1984180983}
+  isosurfaceRenderingButton: {fileID: 73319373}
+  maximumIntensityProjectionButton: {fileID: 1841818683}
+  controlPanel: {fileID: 1053325144}
 --- !u!1 &1845810030
 GameObject:
   m_ObjectHideFlags: 0
@@ -13338,6 +13385,7 @@ GameObject:
   - component: {fileID: 1984180982}
   - component: {fileID: 1984180981}
   - component: {fileID: 1984180980}
+  - component: {fileID: 1984180983}
   m_Layer: 5
   m_Name: DirectVolume
   m_TagString: Untagged
@@ -13352,13 +13400,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1984180978}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 83288360}
-  m_Father: {fileID: 210855639}
+  m_Father: {fileID: 1842527260}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -13447,6 +13495,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1984180978}
   m_CullTransparentMesh: 1
+--- !u!114 &1984180983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984180978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3adcf4700c8193459be264567f0c434, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonBehavior
+  buttonsManager: {fileID: 1842527261}
+  renderMode: 0
 --- !u!1 &2008704095
 GameObject:
   m_ObjectHideFlags: 0

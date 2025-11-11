@@ -95,7 +95,7 @@ public class VolumeObjControlPanelLinker : MonoBehaviour
             return;
         }
 
-        Debug.Log($"VolumeObjControlPanelLinker: Changing render mode to {mode}");
+        // Debug.Log($"VolumeObjControlPanelLinker: Changing render mode to {mode}");
         // Here you would implement the logic to change the render mode of the volumeObject
         volumeObject.SetRenderMode(mode);
     }
