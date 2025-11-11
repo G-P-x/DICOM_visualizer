@@ -1,8 +1,16 @@
 using UnityEngine.UI;
 using UnityEngine;
 
+public enum SliderType
+{
+    MIN_VALUE,
+    MAX_VALUE
+}
+
 public class SliderBehavior : MonoBehaviour
 {
+    [SerializeField]
+    private SliderType sliderType = SliderType.MIN_VALUE;
     public SlidersManager manager; // Reference to the SlidersManager
     public Slider slider; // Reference to the Slider component
 
@@ -17,6 +25,18 @@ public class SliderBehavior : MonoBehaviour
             Debug.LogError("SlidersManager reference is not set in SliderBehavior");
         }
         slider.onValueChanged.AddListener(delegate { NotifyManager(); ChangeColor(); });
+        if (sliderType == SliderType.MIN_VALUE)
+        {
+            slider.minValue = 0f;
+            slider.maxValue = 1f;
+            slider.value = 0f; // Initialize to minimum
+        }
+        else if (sliderType == SliderType.MAX_VALUE)
+        {
+            slider.minValue = 0f;
+            slider.maxValue = 1f;
+            slider.value = 1f; // Initialize to maximum
+        }
     }
 
     // Actions taken when the slider value changes
@@ -24,7 +44,7 @@ public class SliderBehavior : MonoBehaviour
     {
         if (manager != null)
         {
-            manager.Notify(this, (float)slider.value);
+            manager.Notify(sliderType, (float)slider.value);
         }
         return;
     }

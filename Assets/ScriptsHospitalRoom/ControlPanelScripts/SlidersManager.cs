@@ -25,14 +25,9 @@ public class SlidersManager : MonoBehaviour
     /// <summary>
     /// Notify slider change to the other slider, the controlled value, and update the value accordingly
     /// </summary>
-    public void Notify(SliderBehavior sender, float value)
+    public void Notify(SliderType sender, float value)
     {
-        if (sender == null || value < 0f)
-        {
-            Debug.LogError("Sender is null in Notify method of SlidersManager or value is negative");
-            return;
-        }
-        if (sender == minThresholdSlider)
+        if (sender == SliderType.MIN_VALUE)
         {
             float max = maxThresholdSlider.GetValue();
             if (value > max)
@@ -43,7 +38,7 @@ public class SlidersManager : MonoBehaviour
             Debug.Log($"Min Threshold Slider changed to {value}");
             controlPanel.NotifyThresholdChange(value, max);
         }
-        else if (sender == maxThresholdSlider)
+        else if (sender == SliderType.MAX_VALUE)
         {
             float min = minThresholdSlider.GetValue();
             if (value < min)
