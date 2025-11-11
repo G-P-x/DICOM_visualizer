@@ -1,5 +1,5 @@
 1. Create room ✅
 2. Import DICOM visualizer plugin and make it work in my scene ✅
-3. Create another branch to work with Unity native VR toolkit.
+3. Create another branch to work with Unity native VR toolkit. ✅
 4. Implement grab with the displayed object
-5. Implement a panel for the thresholding
+5. Implement a panel for the thresholding ✅
