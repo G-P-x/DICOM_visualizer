@@ -7497,6 +7497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ControlPanel
   linker: {fileID: 326822173}
+  slidersManager: {fileID: 1316062665}
 --- !u!1 &1053601825
 GameObject:
   m_ObjectHideFlags: 0
@@ -10470,7 +10471,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

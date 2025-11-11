@@ -58,6 +58,12 @@ public class SlidersManager : MonoBehaviour
         {
             Debug.LogWarning("Sender slider is not recognized by SlidersManager");
         }
-            
+
+    }
+    
+    public void ResetSliders()
+    {
+        minThresholdSlider.SetValue(0f);
+        maxThresholdSlider.SetValue(1f);
     }
 }
