@@ -13,6 +13,8 @@ UserSettings/
 # Unity editor and player logs.
 Logs/
 
+Release/
+
 
 # Volume Rendering Package specific ignores (remove if something breaks)
 Assets/UnityVolumeRendering-master/UnityVolumeRendering-master/Assets/3rdParty
