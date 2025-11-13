@@ -14,7 +14,9 @@ UserSettings/
 Logs/
 
 Release/
-
+Samples/
+Samples.meta
+.utmp/
 
 # Volume Rendering Package specific ignores (remove if something breaks)
 Assets/UnityVolumeRendering-master/UnityVolumeRendering-master/Assets/3rdParty
